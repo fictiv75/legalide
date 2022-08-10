@@ -1,0 +1,95 @@
+//====================================================================================================
+.hero {
+  position: relative;
+  background: url('@img/hero/hero-bg.jpg') center top / cover no-repeat;
+
+  // .hero__container
+  &__container {
+    display: flex;
+    position: relative;
+
+    @media (max-width:$mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .hero__content
+  &__content {
+    flex: 0 1 rem(480);
+    padding-top: rem(258);
+    // padding-bottom: rem(154);
+    @include adaptiveValue("padding-bottom", 154, 90);
+
+    @media (max-width:$mobile) {
+      flex-basis: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  // .hero__title
+  &__title {
+    font-family: 'Martel';
+    font-weight: 900;
+    @include adaptiveValue("font-size", 58, 38);
+    line-height: math.div(65, 58);
+    letter-spacing: 0.2px;
+    color: $secondColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(34);
+    }
+
+    @media (max-width:$mobile) {
+      font-weight: 700;
+    }
+  }
+
+  // .hero__descr
+  &__descr {
+    max-width: rem(380);
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    line-height: math.div(30, 20);
+    letter-spacing: 0.2px;
+
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+
+    @media (max-width:$mobile) {
+      max-width: 100%;
+    }
+  }
+
+  // .hero__buttons
+  &__buttons {
+    display: inline-flex;
+    gap: rem(10);
+
+    @media (max-width:$mobileSmall) {
+      gap: rem(20);
+      flex-direction: column;
+    }
+  }
+
+  // .hero__button
+  &__button {}
+
+  // .hero__image
+  &__image {
+    flex: 0 1 rem(565);
+    align-self: self-end;
+    position: relative;
+    right: rem(-30);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
+//====================================================================================================
