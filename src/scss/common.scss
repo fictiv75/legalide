@@ -5,7 +5,17 @@
   &__hero {}
 
   // .page__areas
-  &__areas {}
+  &__areas {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+
+  // .page__advice
+  &__advice {
+    padding-top: rem(125);
+    padding-bottom: rem(100);
+    background-color: #fafafa;
+  }
 }
 
 .title {

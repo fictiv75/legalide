@@ -97,8 +97,7 @@
 
 //====================================================================================================
 .areas {
-  padding-top: rem(100);
-  padding-bottom: rem(100);
+
 
   // .areas__container
   &__container {}
@@ -121,7 +120,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: rem(30);
-  @media (max-width:$mobile){
+
+  @media (max-width:$mobile) {
     grid-template-columns: repeat(6, 1fr);
   }
 
@@ -136,19 +136,20 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       grid-column: 6 span;
     }
 
     &.active,
-    &:hover{
+    &:hover {
       background-color: $secondColor;
 
-      .items-areas__icon{
+      .items-areas__icon {
         fill: #fff;
       }
 
-      .items-areas__caption{
+      .items-areas__caption {
         color: #fff;
       }
     }
@@ -159,6 +160,7 @@
     width: rem(53);
     height: rem(53);
     fill: #295c7a;
+
     &:not(:last-child) {
       margin-bottom: rem(10);
     }
@@ -172,5 +174,87 @@
     line-height: math.div(24, 16);
     letter-spacing: 0.1px;
     color: $secondColor;
+  }
+}
+
+//========================================================================================================================================================
+.advice {
+
+  // .advice__container
+  &__container {}
+
+  // .advice__title
+  &__title {}
+
+  // .advice__descr
+  &__descr {
+    &:not(:last-child) {
+      margin-bottom: rem(45);
+    }
+  }
+
+  // .advice__cards
+  &__cards {}
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: rem(30);
+  @media (max-width:$tablet){
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (max-width:$mobileSmall){
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  // .cards-list__card
+  &__card {
+    grid-column: 3 span;
+    @media (max-width:$tablet){
+      grid-column: 4 span;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  // .card__body
+  &__body {
+    padding: rem(30) rem(57) rem(30) rem(30);
+    flex: 1 1 auto;
+  }
+
+  // .card__title
+  &__title {
+    font-family: 'Martel';
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+    letter-spacing: 0.1px;
+    color: $secondColor;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  // .card__descr
+  &__descr {
+    line-height: math.div(20, 14);
+    letter-spacing: 0.2px;
+  }
+
+  // .card__image
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
